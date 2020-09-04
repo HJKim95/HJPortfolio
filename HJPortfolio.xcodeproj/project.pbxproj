@@ -13,7 +13,26 @@
 		101E963B2501496C003E9D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101E96392501496C003E9D35 /* Main.storyboard */; };
 		101E963D2501496D003E9D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101E963C2501496D003E9D35 /* Assets.xcassets */; };
 		101E96402501496D003E9D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101E963E2501496D003E9D35 /* LaunchScreen.storyboard */; };
+		101E964A2501499F003E9D35 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96472501499F003E9D35 /* LoginController.swift */; };
+		101E964B2501499F003E9D35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96482501499F003E9D35 /* Extensions.swift */; };
+		101E964C2501499F003E9D35 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96492501499F003E9D35 /* MainController.swift */; };
+		101E965525014F42003E9D35 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */; };
+		101E965625014F42003E9D35 /* KakaoOpenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		101E965125014C8A003E9D35 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				101E965625014F42003E9D35 /* KakaoOpenSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		101E96302501496C003E9D35 /* HJPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +43,11 @@
 		101E963C2501496D003E9D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		101E963F2501496D003E9D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101E96412501496D003E9D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		101E96472501499F003E9D35 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		101E96482501499F003E9D35 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		101E96492501499F003E9D35 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		101E965225014D0F003E9D35 /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101E965525014F42003E9D35 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +67,7 @@
 			children = (
 				101E96322501496C003E9D35 /* HJPortfolio */,
 				101E96312501496C003E9D35 /* Products */,
+				101E964D25014C8A003E9D35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +82,12 @@
 		101E96322501496C003E9D35 /* HJPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				101E965225014D0F003E9D35 /* KakaoOpenSDK-Bridging-Header.h */,
 				101E96332501496C003E9D35 /* AppDelegate.swift */,
 				101E96352501496C003E9D35 /* SceneDelegate.swift */,
+				101E96482501499F003E9D35 /* Extensions.swift */,
+				101E96472501499F003E9D35 /* LoginController.swift */,
+				101E96492501499F003E9D35 /* MainController.swift */,
 				101E96372501496C003E9D35 /* ViewController.swift */,
 				101E96392501496C003E9D35 /* Main.storyboard */,
 				101E963C2501496D003E9D35 /* Assets.xcassets */,
@@ -65,6 +95,14 @@
 				101E96412501496D003E9D35 /* Info.plist */,
 			);
 			path = HJPortfolio;
+			sourceTree = "<group>";
+		};
+		101E964D25014C8A003E9D35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +115,7 @@
 				101E962C2501496C003E9D35 /* Sources */,
 				101E962D2501496C003E9D35 /* Frameworks */,
 				101E962E2501496C003E9D35 /* Resources */,
+				101E965125014C8A003E9D35 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,8 +177,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101E964B2501499F003E9D35 /* Extensions.swift in Sources */,
 				101E96382501496C003E9D35 /* ViewController.swift in Sources */,
+				101E964A2501499F003E9D35 /* LoginController.swift in Sources */,
 				101E96342501496C003E9D35 /* AppDelegate.swift in Sources */,
+				101E964C2501499F003E9D35 /* MainController.swift in Sources */,
 				101E96362501496C003E9D35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,13 +328,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D2JL6BMG3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HJPortfolio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = HJKim.HJPortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./HJPortfolio/KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,13 +353,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D2JL6BMG3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HJPortfolio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = HJKim.HJPortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./HJPortfolio/KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
