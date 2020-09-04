@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (5.2.2)
+  - FBSDKCoreKit (7.1.1):
+    - FBSDKCoreKit/Basics (= 7.1.1)
+    - FBSDKCoreKit/Core (= 7.1.1)
+  - FBSDKCoreKit/Basics (7.1.1)
+  - FBSDKCoreKit/Core (7.1.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (7.1.1):
+    - FBSDKLoginKit/Login (= 7.1.1)
+  - FBSDKLoginKit/Login (7.1.1):
+    - FBSDKCoreKit (~> 7.1.1)
+  - naveridlogin-sdk-ios (4.1.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - FBSDKLoginKit
+  - naveridlogin-sdk-ios
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - naveridlogin-sdk-ios
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
+  FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
+  naveridlogin-sdk-ios: cf8afccdb1793d4ecfcd5d46aa8729d8b5058c70
+
+PODFILE CHECKSUM: 477e0e4e15ae75289af9b83bc389bf4999b0bd44
+
+COCOAPODS: 1.9.1

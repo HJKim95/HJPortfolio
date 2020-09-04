@@ -19,16 +19,65 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb305936437367203</string>
+				<string>kakaoff66cd9987f0439e9a89492af2ba7529</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>kakao3d533dd5d05d1d9d06d6175af7b0acd9</string>
+				<string>kakaofc27c52a1b1d2da4ab2bd05795d5767b</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>hjportfolio</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>hjportfolio</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>305936437367203</string>
+	<key>FacebookDisplayName</key>
+	<string>HJPortfolio</string>
+	<key>KAKAO_APP_KEY</key>
+	<string>fc27c52a1b1d2da4ab2bd05795d5767b</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fbapi20130214</string>
+		<string>fbapi20130410</string>
+		<string>fbapi20130702</string>
+		<string>fbapi20131010</string>
+		<string>fbapi20131219</string>
+		<string>fbapi20140410</string>
+		<string>fbapi20140116</string>
+		<string>fbapi20150313</string>
+		<string>fbapi20150629</string>
+		<string>fbapi20160328</string>
+		<string>fbauth</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>kakaofc27c52a1b1d2da4ab2bd05795d5767b</string>
+		<string>kakaokompassauth</string>
+		<string>storykompassauth</string>
+		<string>kakaolink</string>
+		<string>kakaotalk-5.9.7</string>
+		<string>storylink</string>
+		<string>naversearchapp</string>
+		<string>naversearchthirdlogin</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>
@@ -67,16 +116,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>KAKAO_APP_KEY</key>
-	<string>3d533dd5d05d1d9d06d6175af7b0acd9</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>kakao3d533dd5d05d1d9d06d6175af7b0acd9</string>
-        <string>kakaokompassauth</string>
-        <string>storykompassauth</string>
-        <string>kakaolink</string>
-        <string>kakaotalk-5.9.7</string>
-        <string>storylink</string>
-    </array>
 </dict>
 </plist>

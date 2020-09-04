@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EE25DD8FA9B75CD1578D8C0 /* Pods_HJPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */; };
 		101E96342501496C003E9D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96332501496C003E9D35 /* AppDelegate.swift */; };
 		101E96362501496C003E9D35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96352501496C003E9D35 /* SceneDelegate.swift */; };
-		101E96382501496C003E9D35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96372501496C003E9D35 /* ViewController.swift */; };
 		101E963B2501496C003E9D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101E96392501496C003E9D35 /* Main.storyboard */; };
 		101E963D2501496D003E9D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101E963C2501496D003E9D35 /* Assets.xcassets */; };
 		101E96402501496D003E9D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101E963E2501496D003E9D35 /* LaunchScreen.storyboard */; };
@@ -18,6 +18,15 @@
 		101E964C2501499F003E9D35 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96492501499F003E9D35 /* MainController.swift */; };
 		101E965525014F42003E9D35 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */; };
 		101E965625014F42003E9D35 /* KakaoOpenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		101E965C2501E27B003E9D35 /* Kakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E965B2501E27B003E9D35 /* Kakao.swift */; };
+		101E965E2501E27F003E9D35 /* KakaoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E965D2501E27F003E9D35 /* KakaoModel.swift */; };
+		101E96602501E2BD003E9D35 /* Naver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E965F2501E2BD003E9D35 /* Naver.swift */; };
+		101E96622501E2C2003E9D35 /* NaverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96612501E2C2003E9D35 /* NaverModel.swift */; };
+		101E9667250209D6003E9D35 /* BannerLoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E9666250209D6003E9D35 /* BannerLoginCell.swift */; };
+		101E9669250209FF003E9D35 /* ButtonLoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E9668250209FF003E9D35 /* ButtonLoginCell.swift */; };
+		101E966B25020A22003E9D35 /* LoginResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E966A25020A22003E9D35 /* LoginResultCell.swift */; };
+		101E966D25021EE5003E9D35 /* FacebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E966C25021EE5003E9D35 /* FacebookModel.swift */; };
+		101E966F25021EED003E9D35 /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E966E25021EED003E9D35 /* Facebook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,7 +47,6 @@
 		101E96302501496C003E9D35 /* HJPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101E96332501496C003E9D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		101E96352501496C003E9D35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		101E96372501496C003E9D35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		101E963A2501496C003E9D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		101E963C2501496D003E9D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		101E963F2501496D003E9D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +56,19 @@
 		101E96492501499F003E9D35 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		101E965225014D0F003E9D35 /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		101E965B2501E27B003E9D35 /* Kakao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kakao.swift; sourceTree = "<group>"; };
+		101E965D2501E27F003E9D35 /* KakaoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakaoModel.swift; sourceTree = "<group>"; };
+		101E965F2501E2BD003E9D35 /* Naver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Naver.swift; sourceTree = "<group>"; };
+		101E96612501E2C2003E9D35 /* NaverModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverModel.swift; sourceTree = "<group>"; };
+		101E9666250209D6003E9D35 /* BannerLoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerLoginCell.swift; sourceTree = "<group>"; };
+		101E9668250209FF003E9D35 /* ButtonLoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoginCell.swift; sourceTree = "<group>"; };
+		101E966A25020A22003E9D35 /* LoginResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResultCell.swift; sourceTree = "<group>"; };
+		101E966C25021EE5003E9D35 /* FacebookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookModel.swift; sourceTree = "<group>"; };
+		101E966E25021EED003E9D35 /* Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
+		101E967025021FDC003E9D35 /* HJPortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HJPortfolio.entitlements; sourceTree = "<group>"; };
+		1738D475F40650605964FFA7 /* Pods-HJPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.debug.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
+		92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HJPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B121E76E6761440851184EE /* Pods-HJPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.release.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101E965525014F42003E9D35 /* KakaoOpenSDK.framework in Frameworks */,
+				0EE25DD8FA9B75CD1578D8C0 /* Pods_HJPortfolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 				101E96322501496C003E9D35 /* HJPortfolio */,
 				101E96312501496C003E9D35 /* Products */,
 				101E964D25014C8A003E9D35 /* Frameworks */,
+				1E9369E6E3E3F6B2F9E2F86A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,13 +105,14 @@
 		101E96322501496C003E9D35 /* HJPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				101E967025021FDC003E9D35 /* HJPortfolio.entitlements */,
 				101E965225014D0F003E9D35 /* KakaoOpenSDK-Bridging-Header.h */,
 				101E96332501496C003E9D35 /* AppDelegate.swift */,
 				101E96352501496C003E9D35 /* SceneDelegate.swift */,
 				101E96482501499F003E9D35 /* Extensions.swift */,
-				101E96472501499F003E9D35 /* LoginController.swift */,
-				101E96492501499F003E9D35 /* MainController.swift */,
-				101E96372501496C003E9D35 /* ViewController.swift */,
+				101E96582501E24F003E9D35 /* Login Helpers */,
+				101E96572501E243003E9D35 /* Controllers */,
+				101E9665250209A6003E9D35 /* Views */,
 				101E96392501496C003E9D35 /* Main.storyboard */,
 				101E963C2501496D003E9D35 /* Assets.xcassets */,
 				101E963E2501496D003E9D35 /* LaunchScreen.storyboard */,
@@ -101,8 +125,66 @@
 			isa = PBXGroup;
 			children = (
 				101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */,
+				92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		101E96572501E243003E9D35 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				101E96472501499F003E9D35 /* LoginController.swift */,
+				101E96492501499F003E9D35 /* MainController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		101E96582501E24F003E9D35 /* Login Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				101E965A2501E272003E9D35 /* Helper */,
+				101E96592501E264003E9D35 /* Model */,
+			);
+			path = "Login Helpers";
+			sourceTree = "<group>";
+		};
+		101E96592501E264003E9D35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				101E965D2501E27F003E9D35 /* KakaoModel.swift */,
+				101E96612501E2C2003E9D35 /* NaverModel.swift */,
+				101E966C25021EE5003E9D35 /* FacebookModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		101E965A2501E272003E9D35 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				101E965B2501E27B003E9D35 /* Kakao.swift */,
+				101E965F2501E2BD003E9D35 /* Naver.swift */,
+				101E966E25021EED003E9D35 /* Facebook.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		101E9665250209A6003E9D35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				101E9668250209FF003E9D35 /* ButtonLoginCell.swift */,
+				101E9666250209D6003E9D35 /* BannerLoginCell.swift */,
+				101E966A25020A22003E9D35 /* LoginResultCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E9369E6E3E3F6B2F9E2F86A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1738D475F40650605964FFA7 /* Pods-HJPortfolio.debug.xcconfig */,
+				9B121E76E6761440851184EE /* Pods-HJPortfolio.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,10 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 101E96442501496D003E9D35 /* Build configuration list for PBXNativeTarget "HJPortfolio" */;
 			buildPhases = (
+				CE2D1A29A4FD55BC1F50A207 /* [CP] Check Pods Manifest.lock */,
 				101E962C2501496C003E9D35 /* Sources */,
 				101E962D2501496C003E9D35 /* Frameworks */,
 				101E962E2501496C003E9D35 /* Resources */,
 				101E965125014C8A003E9D35 /* Embed Frameworks */,
+				83C025BA3F12E40C577ECFB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,17 +256,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		83C025BA3F12E40C577ECFB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE2D1A29A4FD55BC1F50A207 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HJPortfolio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		101E962C2501496C003E9D35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101E966B25020A22003E9D35 /* LoginResultCell.swift in Sources */,
 				101E964B2501499F003E9D35 /* Extensions.swift in Sources */,
-				101E96382501496C003E9D35 /* ViewController.swift in Sources */,
+				101E965E2501E27F003E9D35 /* KakaoModel.swift in Sources */,
+				101E966F25021EED003E9D35 /* Facebook.swift in Sources */,
+				101E96622501E2C2003E9D35 /* NaverModel.swift in Sources */,
+				101E96602501E2BD003E9D35 /* Naver.swift in Sources */,
 				101E964A2501499F003E9D35 /* LoginController.swift in Sources */,
 				101E96342501496C003E9D35 /* AppDelegate.swift in Sources */,
+				101E9669250209FF003E9D35 /* ButtonLoginCell.swift in Sources */,
 				101E964C2501499F003E9D35 /* MainController.swift in Sources */,
+				101E966D25021EE5003E9D35 /* FacebookModel.swift in Sources */,
 				101E96362501496C003E9D35 /* SceneDelegate.swift in Sources */,
+				101E965C2501E27B003E9D35 /* Kakao.swift in Sources */,
+				101E9667250209D6003E9D35 /* BannerLoginCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +458,10 @@
 		};
 		101E96452501496D003E9D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1738D475F40650605964FFA7 /* Pods-HJPortfolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HJPortfolio/HJPortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D2JL6BMG3;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -349,8 +485,10 @@
 		};
 		101E96462501496D003E9D35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B121E76E6761440851184EE /* Pods-HJPortfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HJPortfolio/HJPortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D2JL6BMG3;
 				FRAMEWORK_SEARCH_PATHS = (
