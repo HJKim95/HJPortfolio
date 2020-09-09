@@ -76,17 +76,7 @@ class BannerLoginCell: UICollectionViewCell {
         fb.permissions = ["public_profile", "email"]
         return fb
     }()
-//
-//    lazy var facebookImageView: UIImageView = {
-//        let iv = UIImageView()
-//        iv.backgroundColor = .green
-//        iv.isUserInteractionEnabled = true
-//        iv.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//        iv.widthAnchor.constraint(equalToConstant: 50).isActive = true
-//        return iv
-//    }()
-//
-    
+
     lazy var appleLoginButton: ASAuthorizationAppleIDButton = {
         let button = ASAuthorizationAppleIDButton()
         button.addTarget(self, action: #selector(loginApple), for: .touchUpInside)

@@ -154,7 +154,8 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         
         switch sns {
         case "Kakao":
-            print("12312")
+            createAlert(title: "\(sns) Logout", message: "로그아웃 합니다.", open: false)
+            logoutKakao()
         case "Naver":
             createAlert(title: "\(sns) Logout", message: "로그아웃 합니다.", open: false)
             logoutNaver()
@@ -175,51 +176,73 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     
 //MARK:- Kakao Login
     func loginKakao() {
-        print("kakao login button clicked")
-        let user = Kakao()
-        user.age_range = true
-        user.birthday = true
-        user.birthyear = true
-        user.gender = true
-        user.phone_number = true
-        user.getUserInfo { [weak self] (kakao) in
-            print("--------------------------------")
-//            kakao.nickname
-            guard let name = kakao.nickname else {return}
-            guard let email = kakao.email else {return}
-            
-            self?.refreshLoginInfo(name: name, email: email, sns: "Kakao", login: true)
-//            cell.nameLabel.text = kakao.nickname
-            
-//            print(kakao.age_range)
-//            print(kakao.birthday)
-//            print(kakao.email)
+        if currentUserInfo["sns"] == "Kakao" {
+            self.createAlert(title: "이미 로그인되어 있습니다.", message: "", open: false)
+        }
+        else {
+            if currentUserInfo.count > 0 {
+                let sns = currentUserInfo["sns"] ?? ""
+                self.createAlert(title: "\(sns) 로그아웃을 먼저 해주세요.", message: "", open: false)
+            }
+            else {
+                let user = Kakao()
+                user.age_range = true
+                user.birthday = true
+                user.birthyear = true
+                user.gender = true
+                user.phone_number = true
+                user.getUserInfo { [weak self] (kakao) in
+                    guard let name = kakao.nickname else {return}
+                    guard let email = kakao.email else {return}
+                    
+                    self?.refreshLoginInfo(name: name, email: email, sns: "Kakao", login: true)
+                }
+            }
         }
     }
     
-    
-    
-    var keyArray = ["연령대: ","생일: ","이메일: ","성별: ","id: ","이름: ","별명: ", "프로필이미지url: "]
-    var userInfoArray = [String]()
+    func logoutKakao() {
+        guard let session = KOSession.shared() else { return }
+        session.logoutAndClose { (success, error) in
+            if success {
+                print("logout success.")
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+                print(error?.localizedDescription ?? "")
+            }
+        }
+    }
     
 //MARK:- Facebook Login
     func loginFacebook() {
-        LoginManager().logIn(permissions: ["email" , "public_profile"], from: self) {
-            (result, err) in
-            if err != nil {
-                print("Custom FB Login Failed", err ?? "")
-                return
+        if currentUserInfo["sns"] == "Facebook" {
+            self.createAlert(title: "이미 로그인되어 있습니다.", message: "", open: false)
+        }
+        else {
+            if currentUserInfo.count > 0 {
+                let sns = currentUserInfo["sns"] ?? ""
+                self.createAlert(title: "\(sns) 로그아웃을 먼저 해주세요.", message: "", open: false)
             }
-            if result != nil {
-                let facebook = Facebook()
-                facebook.getFacebookInfo(profImageSize: CGSize(width: 100, height: 100)) { [weak self] (info) in
-                    guard let name = info.name else {return}
-                    guard let email = info.id else {return}
-                    
-                    self?.refreshLoginInfo(name: name, email: email, sns: "Facebook", login: true)
-//                    print(info.id)
-//                    print(info.name)
-//                    print(info.profile_image_url)
+            else {
+                LoginManager().logIn(permissions: ["email" , "public_profile"], from: self) {
+                    (result, err) in
+                    if err != nil {
+                        print("Custom FB Login Failed", err ?? "")
+                        return
+                    }
+                    if result != nil {
+                        let facebook = Facebook()
+                        facebook.getFacebookInfo(profImageSize: CGSize(width: 100, height: 100)) { [weak self] (info) in
+                            guard let name = info.name else {return}
+                            guard let email = info.id else {return}
+                            
+                            self?.refreshLoginInfo(name: name, email: email, sns: "Facebook", login: true)
+        //                    print(info.id)
+        //                    print(info.name)
+        //                    print(info.profile_image_url)
+                        }
+                    }
                 }
             }
         }
@@ -253,9 +276,14 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
 extension LoginController: NaverThirdPartyLoginConnectionDelegate {
 
     func loginNaver() {
-        loginInstance?.delegate = self
-        
-        loginInstance?.requestThirdPartyLogin()
+        if currentUserInfo.count > 0 {
+            let sns = currentUserInfo["sns"] ?? ""
+            self.createAlert(title: "\(sns) 로그아웃을 먼저 해주세요.", message: "", open: false)
+        }
+        else {
+            loginInstance?.delegate = self
+            loginInstance?.requestThirdPartyLogin()
+        }
     }
     
     func logoutNaver() {
@@ -267,15 +295,15 @@ extension LoginController: NaverThirdPartyLoginConnectionDelegate {
         
         let naver = Naver()
         naver.getNaverInfo { [weak self] (naver) in
-            self?.userInfoArray.removeAll()
-            self?.userInfoArray.append(naver.age_range!)
-            self?.userInfoArray.append(naver.birthday!)
-            self?.userInfoArray.append(naver.email!)
-            self?.userInfoArray.append(naver.gender!)
-            self?.userInfoArray.append(naver.id!)
-            self?.userInfoArray.append(naver.name!)
-            self?.userInfoArray.append(naver.nickname!)
-            self?.userInfoArray.append(naver.profile_image_url!)
+//            self?.userInfoArray.removeAll()
+//            self?.userInfoArray.append(naver.age_range!)
+//            self?.userInfoArray.append(naver.birthday!)
+//            self?.userInfoArray.append(naver.email!)
+//            self?.userInfoArray.append(naver.gender!)
+//            self?.userInfoArray.append(naver.id!)
+//            self?.userInfoArray.append(naver.name!)
+//            self?.userInfoArray.append(naver.nickname!)
+//            self?.userInfoArray.append(naver.profile_image_url!)
             guard let name = naver.name else {return}
             guard let email = naver.email else {return}
             

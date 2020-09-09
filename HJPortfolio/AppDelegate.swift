@@ -50,24 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 애플리케이션 이름
         instance?.appName = kServiceAppName
         
-        if let id = UserDefaults.standard.string(forKey: "appleUserId") {
-            let provider = ASAuthorizationAppleIDProvider()
-            provider.getCredentialState(forUserID: id) { (credentialState, error) in
-                switch credentialState {
-                case .authorized:
-                    print("authorized")
-                    break
-                case .revoked:
-                    print("revoked")
-                    break
-                case .notFound:
-                    print("notFound")
-                    break
-                default: break
-                }
-            }
-        }
-        
         return true
     }
     
@@ -94,11 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        return false
     }
-    
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        let handled = ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
-//        return handled
-//    }
+
 
     // MARK: UISceneSession Lifecycle
 
