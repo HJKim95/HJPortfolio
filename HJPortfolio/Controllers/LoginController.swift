@@ -13,6 +13,10 @@ import AuthenticationServices
 
 class LoginController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var userdefault = UserDefaults.standard
+    //Naver login instance
+    let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+    
     let buttonid = "buttonid"
     let bannerid = "bannerid"
     let resultid = "resultid"
@@ -68,6 +72,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: resultid, for: indexPath) as! LoginResultCell
+            cell.delegate = self
             return cell
         }
     }
@@ -84,12 +89,91 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
             return CGSize(width: collectionView.frame.width, height: 330)
         }
         else {
-            return CGSize(width: collectionView.frame.width, height: 300)
+            return CGSize(width: collectionView.frame.width, height: 200)
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkLogin()
+    }
+    
     //MARK:- Login Functions
-    //Kakao
+    
+    var currentUserInfo = [String:String]()
+    
+    func checkLogin() {
+        print("--checking login infos--")
+        if let info = userdefault.dictionary(forKey: "LoginInfo") {
+            let name = info["name"] as? String ?? ""
+            let email = info["email"] as? String ?? ""
+            let sns = info["sns"] as? String ?? ""
+            
+            refreshLoginInfo(name: name, email: email, sns: sns, login: true)
+        }
+    }
+    
+    fileprivate func refreshLoginInfo(name: String, email: String, sns: String, login: Bool) {
+        let indexPath = IndexPath(item: 2, section: 0)
+        let cell = loginCollectionView.cellForItem(at: indexPath) as! LoginResultCell
+        let index = IndexPath(item: 1, section: 0)
+        let bannerCell = loginCollectionView.cellForItem(at: index) as! BannerLoginCell
+        
+        
+        cell.nameLabel.text = "Name: \(name)"
+        cell.emailLabel.text = "Email: \(email)"
+        cell.loginNameLabel.text = "SNS: \(sns)"
+        
+        if login {
+            cell.statusLabel.text = "Connected"
+            cell.statusLabel.textColor = .green
+            cell.loginNameLabel.textColor = .green
+            
+            bannerCell.logoutLabel.alpha = 1
+            
+            let loginInfo: [String: String] = ["name": name, "email": email, "sns": sns]
+            userdefault.set(loginInfo, forKey: "LoginInfo")
+            
+            currentUserInfo["name"] = name
+            currentUserInfo["email"] = email
+            currentUserInfo["sns"] = sns
+        }
+        else {
+            cell.statusLabel.text = "Not connected"
+            cell.statusLabel.textColor = .red
+            cell.loginNameLabel.textColor = .red
+            
+            bannerCell.logoutLabel.alpha = 0
+        }
+
+        loginCollectionView.reloadData()
+
+    }
+    
+    func logout() {
+        let sns = currentUserInfo["sns"] ?? ""
+        
+        switch sns {
+        case "Kakao":
+            print("12312")
+        case "Naver":
+            createAlert(title: "\(sns) Logout", message: "로그아웃 합니다.", open: false)
+            logoutNaver()
+        case "Facebook":
+            createAlert(title: "\(sns) Logout", message: "로그아웃 합니다.", open: false)
+            logoutFacebook()
+        case "Apple":
+            createAlert(title: "\(sns) Logout ERROR", message: "설정창에서 apple id 사용 앱 사용중단해주세요.", open: true)
+        default:
+            break
+        }
+        userdefault.removeObject(forKey: "LoginInfo")
+        currentUserInfo.removeAll()
+        refreshLoginInfo(name: "", email: "", sns: "", login: false)
+        
+    }
+    
+    
+//MARK:- Kakao Login
     func loginKakao() {
         print("kakao login button clicked")
         let user = Kakao()
@@ -100,31 +184,25 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         user.phone_number = true
         user.getUserInfo { [weak self] (kakao) in
             print("--------------------------------")
-            print(kakao.age_range)
-            print(kakao.birthday)
-            print(kakao.email)
+//            kakao.nickname
+            guard let name = kakao.nickname else {return}
+            guard let email = kakao.email else {return}
+            
+            self?.refreshLoginInfo(name: name, email: email, sns: "Kakao", login: true)
+//            cell.nameLabel.text = kakao.nickname
+            
+//            print(kakao.age_range)
+//            print(kakao.birthday)
+//            print(kakao.email)
         }
     }
     
-    //Naver
-    let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
-    func loginNaver() {
-        print("naver login button clicked")
-        loginInstance?.delegate = self
-        
-        loginInstance?.requestThirdPartyLogin()
-    }
-    
-    func logoutNaver() {
-        print("log out!")
-        loginInstance?.requestDeleteToken()
-    }
     
     var keyArray = ["연령대: ","생일: ","이메일: ","성별: ","id: ","이름: ","별명: ", "프로필이미지url: "]
     var userInfoArray = [String]()
     
-    //Facebook
+//MARK:- Facebook Login
     func loginFacebook() {
         LoginManager().logIn(permissions: ["email" , "public_profile"], from: self) {
             (result, err) in
@@ -134,10 +212,14 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
             }
             if result != nil {
                 let facebook = Facebook()
-                facebook.getFacebookInfo(profImageSize: CGSize(width: 100, height: 100)) { (info) in
-                    print(info.id)
-                    print(info.name)
-                    print(info.profile_image_url)
+                facebook.getFacebookInfo(profImageSize: CGSize(width: 100, height: 100)) { [weak self] (info) in
+                    guard let name = info.name else {return}
+                    guard let email = info.id else {return}
+                    
+                    self?.refreshLoginInfo(name: name, email: email, sns: "Facebook", login: true)
+//                    print(info.id)
+//                    print(info.name)
+//                    print(info.profile_image_url)
                 }
             }
         }
@@ -148,21 +230,41 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         LoginManager().logOut()
     }
     
-    func loginApple() {
-        let request = ASAuthorizationAppleIDProvider().createRequest()
-        request.requestedScopes = [.fullName, .email]
-        let controller = ASAuthorizationController(authorizationRequests: [request])
-        controller.delegate = self
-        controller.presentationContextProvider = self
-        controller.performRequests()
+    
+    
+//MARK:- Private
+    func createAlert(title:String, message:String, open:Bool) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("확인", comment: ""), style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            alert.dismiss(animated: true) {
+                if open {
+                    // https://stackoverflow.com/questions/28152526/how-do-i-open-phone-settings-when-a-button-is-clicked
+                    UIApplication.shared.open(URL(string: "App-prefs:Apple_ID")!)
+                }
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
 
+//MARK:- Naver Login
 extension LoginController: NaverThirdPartyLoginConnectionDelegate {
+
+    func loginNaver() {
+        loginInstance?.delegate = self
+        
+        loginInstance?.requestThirdPartyLogin()
+    }
+    
+    func logoutNaver() {
+        loginInstance?.requestDeleteToken()
+    }
+    
     // 로그인에 성공했을 경우 호출
     func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
-        print("[Success] : Success Naver Login")
+        
         let naver = Naver()
         naver.getNaverInfo { [weak self] (naver) in
             self?.userInfoArray.removeAll()
@@ -174,14 +276,16 @@ extension LoginController: NaverThirdPartyLoginConnectionDelegate {
             self?.userInfoArray.append(naver.name!)
             self?.userInfoArray.append(naver.nickname!)
             self?.userInfoArray.append(naver.profile_image_url!)
+            guard let name = naver.name else {return}
+            guard let email = naver.email else {return}
             
-//            self?.naverCollectionview.reloadData()
+            self?.refreshLoginInfo(name: name, email: email, sns: "Naver", login: true)
         }
     }
     
     // 접근 토큰 갱신
     func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
-        print("이미 로그인 되어 있습니다.")
+        self.createAlert(title: "이미 로그인되어 있습니다.", message: "", open: false)
     }
     
     func oauth20ConnectionDidFinishDeleteToken() {
@@ -193,19 +297,57 @@ extension LoginController: NaverThirdPartyLoginConnectionDelegate {
     }
 }
 
+//MARK:- Apple Login
 extension LoginController: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
     }
     
+    func loginApple() {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let userid = userdefault.string(forKey: "appleUserId") ?? ""
+        let provider = ASAuthorizationAppleIDProvider()
+        if currentUserInfo["sns"] == "Apple" {
+            self.createAlert(title: "이미 로그인되어 있습니다.", message: "", open: false)
+        }
+        else {
+            if currentUserInfo.count > 0 {
+                let sns = currentUserInfo["sns"] ?? ""
+                self.createAlert(title: "\(sns) 로그아웃을 먼저 해주세요.", message: "", open: false)
+            }
+            else {
+                provider.getCredentialState(forUserID: userid) { [weak self] (credentialState, error) in
+                    if credentialState != .authorized {
+                        let controller = ASAuthorizationController(authorizationRequests: [request])
+                        controller.delegate = self
+                        controller.presentationContextProvider = self
+                        controller.performRequests()
+                    }
+                    else {
+                        // UIAlert should run on main thread
+                        DispatchQueue.main.async {
+                            self?.createAlert(title: "Apple Login ERROR", message: "설정창에서 apple id 사용 앱 사용중단해주세요.", open: true)
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             let userIdentifier = credential.user
-            let fullName = credential.fullName
-            let email = credential.email
-            print(userIdentifier, fullName, email, separator: "\n")
-            UserDefaults.standard.set(userIdentifier, forKey: "appleUserId")
+            guard let fullName = credential.fullName else {return}
+            let name = "\(fullName.familyName ?? "")\(fullName.givenName ?? "")"
+            let email = credential.email ?? ""
+            self.refreshLoginInfo(name: name, email: email, sns: "Apple", login: true)
+            userdefault.set(userIdentifier, forKey: "appleUserId")
+            
         }
     }
 }

@@ -36,16 +36,15 @@ public class Naver {
 //            print(result)
                 
             let userInfo = NaverModel()
-        
-            guard let object = result["response"] as? [String: Any] else { return }
-            guard let age = object["age"] as? String else { return }
-            guard let birthday = object["birthday"] as? String else { return }
-            guard let gender = object["gender"] as? String else { return }
-            guard let id = object["id"] as? String else { return }
-            guard let name = object["name"] as? String else { return }
-            guard let email = object["email"] as? String else { return }
-            guard let nickname = object["nickname"] as? String else { return }
-            guard let profImageUrl = object["profile_image"] as? String else { return }
+            guard let object = result["response"] as? [String: Any] else {return}
+            let age = object["age"] as? String ?? ""
+            let birthday = object["birthday"] as? String ?? ""
+            let gender = object["gender"] as? String ?? ""
+            let id = object["id"] as? String ?? ""
+            let name = object["name"] as? String ?? ""
+            let email = object["email"] as? String ?? ""
+            let nickname = object["nickname"] as? String ?? ""
+            let profImageUrl = object["profile_image"] as? String ?? ""
             
 //            let userInfo = NaverModel(id: id, age_range: age, birthday: birthday, email: email, gender: gender, name: name, nickname: nickname, profile_image_url: profImageUrl)
             userInfo.age_range = age
@@ -56,7 +55,6 @@ public class Naver {
             userInfo.email = email
             userInfo.nickname = nickname
             userInfo.profile_image_url = profImageUrl
-            
             completed(userInfo)
         }
     }

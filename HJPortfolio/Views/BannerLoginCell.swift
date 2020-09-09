@@ -23,6 +23,21 @@ class BannerLoginCell: UICollectionViewCell {
         return label
     }()
     
+    lazy var logoutLabel: UILabel = {
+        let label = UILabel()
+        label.text = "LOGOUT"
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.textColor = .white
+        label.backgroundColor = .red
+        label.layer.cornerRadius = 10
+        label.layer.masksToBounds = true
+        label.alpha = 0
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(logOut)))
+        return label
+    }()
+    
     lazy var kakaoLoginButton: KOLoginButton = {
         let button = KOLoginButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -106,6 +121,7 @@ class BannerLoginCell: UICollectionViewCell {
     }
     
     var titleLabelConstraint: NSLayoutConstraint?
+    var logoutLabelConstraint: NSLayoutConstraint?
     var kakaoLoginButtonConstraint: NSLayoutConstraint?
     var naverBannerContainerViewConstraint: NSLayoutConstraint?
     var naverImageViewConstraint: NSLayoutConstraint?
@@ -117,6 +133,7 @@ class BannerLoginCell: UICollectionViewCell {
         backgroundColor = .white
 
         addSubview(titleLabel)
+        addSubview(logoutLabel)
         addSubview(kakaoLoginButton)
         addSubview(naverBannerContainerView)
         naverBannerContainerView.addSubview(naverImageView)
@@ -124,7 +141,8 @@ class BannerLoginCell: UICollectionViewCell {
         addSubview(facebookLoginButton)
         addSubview(appleLoginButton)
 
-        titleLabelConstraint = titleLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30).first
+        titleLabelConstraint = titleLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 200, heightConstant: 30).first
+        logoutLabelConstraint = logoutLabel.anchor(self.topAnchor, left: nil, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 20, widthConstant: 100, heightConstant: 30).first
         kakaoLoginButtonConstraint = kakaoLoginButton.anchor(titleLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 30, leftConstant: 50, bottomConstant: 0, rightConstant: 50, widthConstant: 0, heightConstant: 40).first
         naverBannerContainerViewConstraint = naverBannerContainerView.anchor(kakaoLoginButton.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 50, bottomConstant: 0, rightConstant: 50, widthConstant: 0, heightConstant: 40).first
         naverImageViewConstraint = naverImageView.anchor(naverBannerContainerView.topAnchor, left: naverBannerContainerView.leftAnchor, bottom: naverBannerContainerView.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 40, heightConstant: 0).first
@@ -133,16 +151,20 @@ class BannerLoginCell: UICollectionViewCell {
         appleLoginButtonConstraint = appleLoginButton.anchor(facebookLoginButton.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 50, bottomConstant: 0, rightConstant: 50, widthConstant: 0, heightConstant: 40).first
     }
     
-    @objc func loginKakao() {
+    @objc fileprivate func loginKakao() {
         delegate?.loginKakao()
     }
     
-    @objc func loginNaver() {
+    @objc fileprivate func loginNaver() {
         delegate?.loginNaver()
     }
     
-    @objc func loginApple() {
+    @objc fileprivate func loginApple() {
         delegate?.loginApple()
+    }
+    
+    @objc fileprivate func logOut() {
+        delegate?.logout()
     }
     
 }

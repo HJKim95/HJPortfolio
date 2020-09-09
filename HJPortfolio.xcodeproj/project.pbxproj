@@ -133,8 +133,8 @@
 		101E96572501E243003E9D35 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				101E96472501499F003E9D35 /* LoginController.swift */,
 				101E96492501499F003E9D35 /* MainController.swift */,
+				101E96472501499F003E9D35 /* LoginController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

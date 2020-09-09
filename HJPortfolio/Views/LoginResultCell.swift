@@ -10,9 +10,20 @@ import UIKit
 
 class LoginResultCell: UICollectionViewCell {
     
+    var delegate: LoginController?
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Login Results"
+        label.textAlignment = .left
+        label.adjustsFontSizeToFitWidth = true
+        label.textColor = .black
+        return label
+    }()
+    
+    let loginNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "SNS: "
         label.textAlignment = .left
         label.adjustsFontSizeToFitWidth = true
         label.textColor = .black
@@ -58,20 +69,30 @@ class LoginResultCell: UICollectionViewCell {
     
     var titleLabelConstraint: NSLayoutConstraint?
     var statusLabelConstraint: NSLayoutConstraint?
+    var loginNameLabelConstraint: NSLayoutConstraint?
     var nameLabelConstraint: NSLayoutConstraint?
     var emailLabelConstraint: NSLayoutConstraint?
     
     fileprivate func setupLayouts() {
-        backgroundColor = .lightGray
+        backgroundColor = .white
         
         addSubview(titleLabel)
         addSubview(statusLabel)
+        addSubview(loginNameLabel)
         addSubview(nameLabel)
         addSubview(emailLabel)
 
         titleLabelConstraint = titleLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 100, heightConstant: 30).first
         statusLabelConstraint = statusLabel.anchor(self.topAnchor, left: titleLabel.rightAnchor, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 30).first
-        nameLabelConstraint = nameLabel.anchor(titleLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 30, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30).first
+        loginNameLabelConstraint = loginNameLabel.anchor(titleLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30).first
+        nameLabelConstraint = nameLabel.anchor(loginNameLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30).first
         emailLabelConstraint = emailLabel.anchor(nameLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30).first
+        
+        checkLogin()
+        
+    }
+    
+    fileprivate func checkLogin() {
+//        delegate?.checkLogin()
     }
 }
