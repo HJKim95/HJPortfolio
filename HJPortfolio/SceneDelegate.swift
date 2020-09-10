@@ -62,12 +62,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-      if let url = URLContexts.first?.url {
-        KOSession.handleOpen(url)
-      }
-        NaverThirdPartyLoginConnection.getSharedInstance()?.receiveAccessToken(URLContexts.first?.url)
-        
         guard let url = URLContexts.first?.url else {return}
+        let urlString = url.absoluteString
+        if urlString.contains("kakao") {
+            // kakao
+            KOSession.handleOpen(url)
+        }
+        else if urlString.contains("hjportfolio") {
+            // naver
+            NaverThirdPartyLoginConnection.getSharedInstance()?.receiveAccessToken(url)
+        }
+
         ApplicationDelegate.shared.application(UIApplication.shared, open: url, sourceApplication: nil, annotation: [UIApplication.OpenURLOptionsKey.annotation])
     }
 }

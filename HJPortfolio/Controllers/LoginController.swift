@@ -32,6 +32,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         return cv
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -205,7 +206,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         guard let session = KOSession.shared() else { return }
         session.logoutAndClose { (success, error) in
             if success {
-                print("logout success.")
+                print("logout kakao successed.")
                 self.dismiss(animated: true, completion: nil)
             }
             else {
