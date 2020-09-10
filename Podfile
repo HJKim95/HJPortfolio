@@ -10,6 +10,8 @@ pod 'naveridlogin-sdk-ios'
 pod 'Alamofire'
 pod 'FBSDKLoginKit'
 
+pod 'HJWeather'
+
   # Pods for HJPortfolio
 
 end
