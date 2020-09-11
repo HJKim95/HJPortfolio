@@ -11,13 +11,8 @@ import HJWeather
 
 class WeatherBannerCell: UICollectionViewCell {
     
-    var nowWeather = nowWeatherModel() {
-        didSet {
-//            weatherLabel.attributedText = nowWeather.attributedString
-//            weatherLabel.sizeToFit()
-//            compareLabel.text = nowWeather.sky_text
-        }
-    }
+    var delegate: MainController?
+    
     
     var weatherInfo = [String:String]() {
         didSet {
@@ -61,7 +56,6 @@ class WeatherBannerCell: UICollectionViewCell {
     let weatherImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        iv.backgroundColor = .white
         return iv
     }()
     
@@ -71,7 +65,6 @@ class WeatherBannerCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 26)
-        label.backgroundColor = .white
         return label
     }()
     
@@ -81,7 +74,6 @@ class WeatherBannerCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .black
-        label.backgroundColor = .white
         return label
     }()
     
@@ -91,7 +83,6 @@ class WeatherBannerCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .black
-        label.backgroundColor = .white
         label.text = "   어제보다 3°C 낮아요."
         return label
     }()
@@ -100,7 +91,6 @@ class WeatherBannerCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.backgroundColor = .white
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 15)
         return label
@@ -110,6 +100,14 @@ class WeatherBannerCell: UICollectionViewCell {
         let view = UIView()
         view.backgroundColor = UIColor(white: 0.4, alpha: 0.4)
         return view
+    }()
+    
+    lazy var updateImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named: "refresh")
+        iv.isUserInteractionEnabled = true
+        iv.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(updateLocation)))
+        return iv
     }()
     
     
@@ -130,6 +128,7 @@ class WeatherBannerCell: UICollectionViewCell {
     var compareLabelConstraint: NSLayoutConstraint?
     var dustLabelConstraint: NSLayoutConstraint?
     var dividerLineConstraint: NSLayoutConstraint?
+    var updateImageViewConstraint: NSLayoutConstraint?
     
     fileprivate func setupLayouts() {
         backgroundColor = .collectionviewBackColor
@@ -143,17 +142,34 @@ class WeatherBannerCell: UICollectionViewCell {
         containerView.addSubview(compareLabel)
         containerView.addSubview(dustLabel)
         containerView.addSubview(dividerLine)
+        containerView.addSubview(updateImageView)
         
         
-        categoryLabelConstraint = categoryLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20).first
+        categoryLabelConstraint = categoryLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 10, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20).first
         containerViewConstraint = containerView.anchor(categoryLabel.bottomAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
         dustLabelConstraint = dustLabel.anchor(nil, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30).first
-        weatherImageViewConstraint = weatherImageView.anchor(categoryLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 5, leftConstant: 12, bottomConstant: 5, rightConstant: 0, widthConstant: 60, heightConstant: 60).first
-        weatherLabelConstraint = weatherLabel.anchor(categoryLabel.bottomAnchor, left: weatherImageView.rightAnchor, bottom: dustLabel.topAnchor, right: nil, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 70, heightConstant: 0).first
-        locationLabelConstraint = locationLabel.anchor(categoryLabel.bottomAnchor, left: weatherLabel.rightAnchor, bottom: nil, right: self.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 30, widthConstant: 0, heightConstant: 30).first
-        compareLabelConstraint = compareLabel.anchor(locationLabel.bottomAnchor, left: weatherLabel.rightAnchor, bottom: dustLabel.topAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0.5, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
+        weatherImageViewConstraint = weatherImageView.anchor(categoryLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 12, bottomConstant: 5, rightConstant: 0, widthConstant: 62, heightConstant: 62).first
+        weatherLabelConstraint = weatherLabel.anchor(categoryLabel.bottomAnchor, left: weatherImageView.rightAnchor, bottom: dustLabel.topAnchor, right: nil, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 70, heightConstant: 0).first
+        updateImageViewConstraint = updateImageView.anchor(locationLabel.topAnchor, left: nil, bottom: nil, right: self.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 15, widthConstant: 25, heightConstant: 25).first
+        locationLabelConstraint = locationLabel.anchor(categoryLabel.bottomAnchor, left: weatherLabel.rightAnchor, bottom: nil, right: updateImageView.leftAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30).first
+        compareLabelConstraint = compareLabel.anchor(locationLabel.bottomAnchor, left: weatherLabel.rightAnchor, bottom: dustLabel.topAnchor, right: updateImageView.leftAnchor, topConstant: -10, leftConstant: 0, bottomConstant: 0.5, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
         dividerLineConstraint = dividerLine.anchor(compareLabel.bottomAnchor, left: self.leftAnchor, bottom: dustLabel.topAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 0.5).first
         
+        
+    }
+    
+    @objc fileprivate func updateLocation() {
+        rotate()
+        delegate?.updateLocation()
+    }
+    
+    fileprivate func rotate() {
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = NSNumber(value: Double.pi * 2)
+        rotation.duration = 0.8
+        rotation.isCumulative = true
+        rotation.repeatCount = 2
+        updateImageView.layer.add(rotation, forKey: "rotationAnimation")
     }
     
 }

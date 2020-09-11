@@ -75,10 +75,10 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if indexPath.item == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: weatherid, for: indexPath) as! WeatherBannerCell
             cell.categoryLabel.text = bigCategories[indexPath.item]
-//            cell.nowWeather = nowWeather
             cell.weatherInfo = weatherBannerInfo
             cell.dustAttributedString = dustAttributedString
             cell.locationString = locationText
+            cell.delegate = self
             return cell
         }
         else {
@@ -175,7 +175,15 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    var nowWeather = nowWeatherModel()
+    func updateLocation() {
+        weatherBannerInfo.removeAll()
+        dustAttributedString =  NSMutableAttributedString(string: "")
+        
+//        updateImageView.isUserInteractionEnabled = false
+        didUpdated = false
+        locationManager.startUpdatingLocation()
+    }
+    
     var weatherBannerInfo = [String:String]()
     
     fileprivate func getNowWeather(lat: String, long: String) {
