@@ -4,7 +4,7 @@
 [![Languages](https://img.shields.io/badge/language-swift%205.0%20-FF69B4.svg?style=plastic)](#) <br/> 
 [![CI Status](https://img.shields.io/travis/HJKim95/HJPortfolio.svg?style=flat)](https://travis-ci.org/HJKim95/HJPortfolio)
 ![Version](https://img.shields.io/github/v/tag/HJKim95/HJPortfolio?color=red&label=version)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/HJKim95/HJPortfolio/blob/master/LICENSE)
 
 ## Example
 

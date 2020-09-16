@@ -38,7 +38,18 @@
 		101E96852509E061003E9D35 /* forecastWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96842509E061003E9D35 /* forecastWeatherCell.swift */; };
 		101E96872509E079003E9D35 /* forecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96862509E079003E9D35 /* forecastCell.swift */; };
 		101E96892509E08B003E9D35 /* weatherBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96882509E08B003E9D35 /* weatherBar.swift */; };
+		101E96932511E655003E9D35 /* HJPortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96922511E655003E9D35 /* HJPortfolioUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		101E96952511E655003E9D35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 101E96282501496C003E9D35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 101E962F2501496C003E9D35;
+			remoteInfo = HJPortfolio;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		101E965125014C8A003E9D35 /* Embed Frameworks */ = {
@@ -88,6 +99,9 @@
 		101E96842509E061003E9D35 /* forecastWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forecastWeatherCell.swift; sourceTree = "<group>"; };
 		101E96862509E079003E9D35 /* forecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forecastCell.swift; sourceTree = "<group>"; };
 		101E96882509E08B003E9D35 /* weatherBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherBar.swift; sourceTree = "<group>"; };
+		101E96902511E655003E9D35 /* HJPortfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJPortfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		101E96922511E655003E9D35 /* HJPortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJPortfolioUITests.swift; sourceTree = "<group>"; };
+		101E96942511E655003E9D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1738D475F40650605964FFA7 /* Pods-HJPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.debug.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HJPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B121E76E6761440851184EE /* Pods-HJPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.release.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +117,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		101E968D2511E655003E9D35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				101E96322501496C003E9D35 /* HJPortfolio */,
+				101E96912511E655003E9D35 /* HJPortfolioUITests */,
 				101E96312501496C003E9D35 /* Products */,
 				101E964D25014C8A003E9D35 /* Frameworks */,
 				1E9369E6E3E3F6B2F9E2F86A /* Pods */,
@@ -120,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				101E96302501496C003E9D35 /* HJPortfolio.app */,
+				101E96902511E655003E9D35 /* HJPortfolioUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,6 +258,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		101E96912511E655003E9D35 /* HJPortfolioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				101E96922511E655003E9D35 /* HJPortfolioUITests.swift */,
+				101E96942511E655003E9D35 /* Info.plist */,
+			);
+			path = HJPortfolioUITests;
+			sourceTree = "<group>";
+		};
 		1E9369E6E3E3F6B2F9E2F86A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +299,24 @@
 			productReference = 101E96302501496C003E9D35 /* HJPortfolio.app */;
 			productType = "com.apple.product-type.application";
 		};
+		101E968F2511E655003E9D35 /* HJPortfolioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 101E96992511E655003E9D35 /* Build configuration list for PBXNativeTarget "HJPortfolioUITests" */;
+			buildPhases = (
+				101E968C2511E655003E9D35 /* Sources */,
+				101E968D2511E655003E9D35 /* Frameworks */,
+				101E968E2511E655003E9D35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				101E96962511E655003E9D35 /* PBXTargetDependency */,
+			);
+			name = HJPortfolioUITests;
+			productName = HJPortfolioUITests;
+			productReference = 101E96902511E655003E9D35 /* HJPortfolioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -279,6 +329,10 @@
 				TargetAttributes = {
 					101E962F2501496C003E9D35 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					101E968F2511E655003E9D35 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 101E962F2501496C003E9D35;
 					};
 				};
 			};
@@ -296,6 +350,7 @@
 			projectRoot = "";
 			targets = (
 				101E962F2501496C003E9D35 /* HJPortfolio */,
+				101E968F2511E655003E9D35 /* HJPortfolioUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +363,13 @@
 				101E96402501496D003E9D35 /* LaunchScreen.storyboard in Resources */,
 				101E963D2501496D003E9D35 /* Assets.xcassets in Resources */,
 				101E963B2501496C003E9D35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		101E968E2511E655003E9D35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +450,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		101E968C2511E655003E9D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				101E96932511E655003E9D35 /* HJPortfolioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		101E96962511E655003E9D35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 101E962F2501496C003E9D35 /* HJPortfolio */;
+			targetProxy = 101E96952511E655003E9D35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		101E96392501496C003E9D35 /* Main.storyboard */ = {
@@ -578,6 +656,44 @@
 			};
 			name = Release;
 		};
+		101E96972511E655003E9D35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D2JL6BMG3;
+				INFOPLIST_FILE = HJPortfolioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HJKim.HJPortfolioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HJPortfolio;
+			};
+			name = Debug;
+		};
+		101E96982511E655003E9D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D2JL6BMG3;
+				INFOPLIST_FILE = HJPortfolioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HJKim.HJPortfolioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HJPortfolio;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -595,6 +711,15 @@
 			buildConfigurations = (
 				101E96452501496D003E9D35 /* Debug */,
 				101E96462501496D003E9D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		101E96992511E655003E9D35 /* Build configuration list for PBXNativeTarget "HJPortfolioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				101E96972511E655003E9D35 /* Debug */,
+				101E96982511E655003E9D35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
