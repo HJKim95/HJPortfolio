@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/HJKim95/HJPortfolio/blob/master/LICENSE)
 
 ## Requirements
-* iOS 10.0+ 
+* iOS 13.0+ 
 * Xcode 11+
 * Swift 5.0+
 
@@ -22,11 +22,17 @@
     - [Timbre](#timbre)
 - [Collectionview transforming layouts](#transforming_layouts)
 
-### SNS Login <a id='sns_login'></a>
+## SNS Login <a id='sns_login'></a>
+### Getting Started
+- [Kakao](https://github.com/HJKim95/HJLogin-Kakao)
+- [Naver](https://github.com/HJKim95/HJLogin-Naver)
+- [Facebook](https://github.com/HJKim95/HJLogin-Facebook)
+- [Apple](https://github.com/HJKim95/HJLogin-Apple)
 
-### Weather <a id='weather'></a>
 
-### Collectionview custom Layouts <a id='custom_layouts'></a>
+## Weather <a id='weather'></a>
+
+## Collectionview custom Layouts <a id='custom_layouts'></a>
 - Pinterest <a id='pinterest'></a>
 
 - Sticky Header <a id='sticky_header'></a>
@@ -35,7 +41,7 @@
 
 - Timbre <a id='timbre'></a>
 
-### Collectionview transforming layouts <a id='transforming_layouts'></a>
+## Collectionview transforming layouts <a id='transforming_layouts'></a>
 
 
 
