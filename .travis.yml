@@ -1,0 +1,5 @@
+osx_image: xcode11.6
+language: objective-c
+xcode_workspace: HJPortfolio.xcworkspace
+xcode_scheme: HJPortfolio
+xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone 11 Pro
