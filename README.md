@@ -24,15 +24,20 @@
 
 ## SNS Login <a id='sns_login'></a>
 ### Getting Started
-- [Kakao](https://github.com/HJKim95/HJLogin-Kakao)
-- [Naver](https://github.com/HJKim95/HJLogin-Naver)
-- [Facebook](https://github.com/HJKim95/HJLogin-Facebook)
-- [Apple](https://github.com/HJKim95/HJLogin-Apple)
+- [HJLogin-Kakao](https://github.com/HJKim95/HJLogin-Kakao)
+- [HJLogin-Naver](https://github.com/HJKim95/HJLogin-Naver)
+- [HJLogin-Facebook](https://github.com/HJKim95/HJLogin-Facebook)
+- [HJLogin-Apple](https://github.com/HJKim95/HJLogin-Apple)
 
 
 ## Weather <a id='weather'></a>
+### Getting Started
+- [HJWeather](https://github.com/HJKim95/HJWeather)
+
 
 ## Collectionview custom Layouts <a id='custom_layouts'></a>
+### Getting Started
+- [HJLayout](https://github.com/HJKim95/HJLayout)
 - Pinterest <a id='pinterest'></a>
 
 - Sticky Header <a id='sticky_header'></a>
@@ -42,7 +47,8 @@
 - Timbre <a id='timbre'></a>
 
 ## Collectionview transforming layouts <a id='transforming_layouts'></a>
-
+### Getting Started
+- [HJLayout](https://github.com/HJKim95/HJLayout)
 
 
 
