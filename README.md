@@ -32,7 +32,8 @@
 ### Features
 - Used UserDefault to store login infos.
 
-![login_portfolio](https://user-images.githubusercontent.com/29699823/93412677-9682cb80-f8d8-11ea-8433-55c3f88eb46b.gif)
+![login_portfolio_mini](https://user-images.githubusercontent.com/29699823/93412934-1f016c00-f8d9-11ea-9b63-f105b8b07cda.gif)
+
 
 ## Weather <a id='weather'></a>
 ### Getting Started
