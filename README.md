@@ -31,6 +31,7 @@
 
 ### Features
 - Used UserDefault to store login infos.
+- Used MVC design pattern.
 
 ![login_portfolio](https://user-images.githubusercontent.com/29699823/93413187-a818a300-f8d9-11ea-8598-081723da9e52.gif)
 
@@ -39,6 +40,13 @@
 ## Weather <a id='weather'></a>
 ### Getting Started
 - [HJWeather](https://github.com/HJKim95/HJWeather)
+
+### Features
+- Used 'Alamofire', 'SwiftyJSON' to access 기상청 api json data.
+- Used MVC design pattern.
+- Covers Korea all regions.
+
+![weather_portfolio](https://user-images.githubusercontent.com/29699823/93420983-26ca0c00-f8eb-11ea-8d46-5c3656a310b5.gif)
 
 
 ## Collectionview custom Layouts <a id='custom_layouts'></a>
