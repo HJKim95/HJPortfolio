@@ -19,8 +19,8 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     let bigCategories = ["Logins","Weathers","Collectionview layouts", "Collectionview transforming layouts"]
     let loginCategories = ["SNS Login"]
-    let layoutCategories = ["pinterest", "sticky Header", "ultra visual", "timbre"]
-    let transformingCategories = ["transforming"]
+    let layoutCategories = ["Pinterest", "Sticky Header", "Ultra Visual", "Timbre"]
+    let transformingCategories = ["Transforming"]
     
     let titleLabel: UILabel = {
         let label = UILabel()
@@ -47,13 +47,15 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         view.backgroundColor = .white
         self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.setStatusBar(color1: .mainGradient_color1, color2: .mainGradient_color2) // custom extension
         
         setupLayouts()
         getLocationPermission()
         totalCategoryCollectionView.register(bigCategoryCell.self, forCellWithReuseIdentifier: cellid)
         totalCategoryCollectionView.register(WeatherBannerCell.self, forCellWithReuseIdentifier: weatherid)
-        
+
     }
+    
     
     fileprivate func setupLayouts() {
         view.addSubview(titleLabel)
@@ -129,23 +131,25 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var cellIndex = 0
     
     func pushController(controller: String, tag: Int, index: Int) {
-        var controll = LoginController()
+        var controll = UIViewController()
         cellTag = tag
         cellIndex = index
-//        switch controller {
-//        case "pinterest":
-//            controll = PinterestController()
-//        case "sticky Header":
-//            controll = StickyHeaderController()
-//        case "ultra visual":
-//            controll = UltraVisualController()
-//        case "timbre":
-//            controll = TimbreController()
-//        case "transforming":
-//            controll = TransformingController()
-//        default:
-//            print("none of controller matched")
-//        }
+        switch controller {
+        case "SNS Login":
+            controll = LoginController()
+        case "Pinterest":
+            controll = PinterestController()
+        case "Sticky Header":
+            controll = StickyHeaderController()
+        case "Ultra Visual":
+            controll = UltraVisualController()
+        case "Timbre":
+            controll = TimbreController()
+        case "Transforming":
+            controll = TransformingController()
+        default:
+            print("none of controller matched")
+        }
         self.navigationController?.pushViewController(controll, animated: true)
     }
     

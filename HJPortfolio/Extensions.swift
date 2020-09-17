@@ -53,6 +53,14 @@ extension UIColor {
         return UIColor(red: 238, green: 238, blue: 243)
     }
     
+    @nonobjc class var mainGradient_color1: UIColor {
+        return UIColor(red: 211, green: 48, blue: 124)
+    }
+    
+    @nonobjc class var mainGradient_color2: UIColor {
+        return UIColor(red: 239, green: 180, blue: 77)
+    }
+    
     // https://stackoverflow.com/questions/24263007/how-to-use-hex-color-values
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
@@ -69,6 +77,27 @@ extension UIColor {
             blue: hex & 0xFF
         )
     }
+}
 
+
+extension UINavigationController {
+
+    func setStatusBar(color1: UIColor, color2: UIColor) {
+        let statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [color1.cgColor, color2.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = statusBarFrame
+                
+        self.view.layer.addSublayer(gradientLayer)
+    }
 
 }

@@ -18,7 +18,7 @@ class WeatherBannerCell: UICollectionViewCell {
         didSet {
             guard let imageString = weatherInfo["weatherImage"] else {return}
             guard let tempString = weatherInfo["weatherTemp"] else {return}
-            guard let skyString = weatherInfo["weatherSky"] else {return}
+//            guard let skyString = weatherInfo["weatherSky"] else {return}
             weatherImageView.image = UIImage(named: imageString)
             weatherLabel.text = "\(tempString)°C"
             

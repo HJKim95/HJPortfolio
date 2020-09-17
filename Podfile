@@ -11,6 +11,7 @@ pod 'Alamofire'
 pod 'FBSDKLoginKit'
 
 pod 'HJWeather'
+pod 'HJLayout'
 
   # Pods for HJPortfolio
 

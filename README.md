@@ -60,10 +60,13 @@
 
 - Timbre <a id='timbre'></a>
 
+![custom_layout_portfolio](https://user-images.githubusercontent.com/29699823/93434058-9b5c7500-f902-11ea-9db7-e5fbb060b6d3.gif)
+
 ## Collectionview transforming layouts <a id='transforming_layouts'></a>
 ### Getting Started
 - [HJLayout](https://github.com/HJKim95/HJLayout)
 
+![transforming_layout_portfolio](https://user-images.githubusercontent.com/29699823/93434960-be3b5900-f903-11ea-8672-5d5b4e753fd8.gif)
 
 
 ## Author

@@ -40,6 +40,16 @@
 		101E96892509E08B003E9D35 /* weatherBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96882509E08B003E9D35 /* weatherBar.swift */; };
 		101E96932511E655003E9D35 /* HJPortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96922511E655003E9D35 /* HJPortfolioUITests.swift */; };
 		10F2A8BB2512F728003E2244 /* weather_location.csv in Resources */ = {isa = PBXBuildFile; fileRef = 10F2A8BA2512F728003E2244 /* weather_location.csv */; };
+		10F2A8C125132243003E2244 /* StickyHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8BC25132243003E2244 /* StickyHeaderController.swift */; };
+		10F2A8C225132243003E2244 /* PinterestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8BD25132243003E2244 /* PinterestController.swift */; };
+		10F2A8C325132243003E2244 /* UltraVisualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8BE25132243003E2244 /* UltraVisualController.swift */; };
+		10F2A8C425132243003E2244 /* TimbreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8BF25132243003E2244 /* TimbreController.swift */; };
+		10F2A8C525132243003E2244 /* TransformingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8C025132243003E2244 /* TransformingController.swift */; };
+		10F2A8C925132F05003E2244 /* PinterestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8C825132F05003E2244 /* PinterestCell.swift */; };
+		10F2A8CB25132F3D003E2244 /* StickyHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8CA25132F3D003E2244 /* StickyHeaderCell.swift */; };
+		10F2A8CD25132F58003E2244 /* TImbreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8CC25132F58003E2244 /* TImbreCell.swift */; };
+		10F2A8CF25132F9A003E2244 /* UltraVisualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8CE25132F9A003E2244 /* UltraVisualCell.swift */; };
+		10F2A8D125132FE1003E2244 /* TransformingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8D025132FE1003E2244 /* TransformingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +114,16 @@
 		101E96922511E655003E9D35 /* HJPortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJPortfolioUITests.swift; sourceTree = "<group>"; };
 		101E96942511E655003E9D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10F2A8BA2512F728003E2244 /* weather_location.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = weather_location.csv; sourceTree = "<group>"; };
+		10F2A8BC25132243003E2244 /* StickyHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyHeaderController.swift; sourceTree = "<group>"; };
+		10F2A8BD25132243003E2244 /* PinterestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestController.swift; sourceTree = "<group>"; };
+		10F2A8BE25132243003E2244 /* UltraVisualController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltraVisualController.swift; sourceTree = "<group>"; };
+		10F2A8BF25132243003E2244 /* TimbreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimbreController.swift; sourceTree = "<group>"; };
+		10F2A8C025132243003E2244 /* TransformingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformingController.swift; sourceTree = "<group>"; };
+		10F2A8C825132F05003E2244 /* PinterestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestCell.swift; sourceTree = "<group>"; };
+		10F2A8CA25132F3D003E2244 /* StickyHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderCell.swift; sourceTree = "<group>"; };
+		10F2A8CC25132F58003E2244 /* TImbreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImbreCell.swift; sourceTree = "<group>"; };
+		10F2A8CE25132F9A003E2244 /* UltraVisualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraVisualCell.swift; sourceTree = "<group>"; };
+		10F2A8D025132FE1003E2244 /* TransformingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformingCell.swift; sourceTree = "<group>"; };
 		1738D475F40650605964FFA7 /* Pods-HJPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.debug.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HJPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B121E76E6761440851184EE /* Pods-HJPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.release.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +204,7 @@
 				101E96492501499F003E9D35 /* MainController.swift */,
 				101E96472501499F003E9D35 /* LoginController.swift */,
 				101E967A2509DFE8003E9D35 /* WeatherController.swift */,
+				10F2A8C625132249003E2244 /* Collectionview custom layouts */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +244,7 @@
 				101E96752509CA6A003E9D35 /* Main */,
 				101E96712509C88B003E9D35 /* Logins */,
 				101E96722509C893003E9D35 /* Weather */,
+				10F2A8C725132ED4003E2244 /* Collectionview */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +290,30 @@
 				101E96942511E655003E9D35 /* Info.plist */,
 			);
 			path = HJPortfolioUITests;
+			sourceTree = "<group>";
+		};
+		10F2A8C625132249003E2244 /* Collectionview custom layouts */ = {
+			isa = PBXGroup;
+			children = (
+				10F2A8BD25132243003E2244 /* PinterestController.swift */,
+				10F2A8BC25132243003E2244 /* StickyHeaderController.swift */,
+				10F2A8BF25132243003E2244 /* TimbreController.swift */,
+				10F2A8BE25132243003E2244 /* UltraVisualController.swift */,
+				10F2A8C025132243003E2244 /* TransformingController.swift */,
+			);
+			path = "Collectionview custom layouts";
+			sourceTree = "<group>";
+		};
+		10F2A8C725132ED4003E2244 /* Collectionview */ = {
+			isa = PBXGroup;
+			children = (
+				10F2A8C825132F05003E2244 /* PinterestCell.swift */,
+				10F2A8CA25132F3D003E2244 /* StickyHeaderCell.swift */,
+				10F2A8CC25132F58003E2244 /* TImbreCell.swift */,
+				10F2A8CE25132F9A003E2244 /* UltraVisualCell.swift */,
+				10F2A8D025132FE1003E2244 /* TransformingCell.swift */,
+			);
+			path = Collectionview;
 			sourceTree = "<group>";
 		};
 		1E9369E6E3E3F6B2F9E2F86A /* Pods */ = {
@@ -432,15 +478,25 @@
 				101E965E2501E27F003E9D35 /* KakaoModel.swift in Sources */,
 				101E96872509E079003E9D35 /* forecastCell.swift in Sources */,
 				101E966F25021EED003E9D35 /* Facebook.swift in Sources */,
+				10F2A8C325132243003E2244 /* UltraVisualController.swift in Sources */,
 				101E96622501E2C2003E9D35 /* NaverModel.swift in Sources */,
 				101E96832509E04C003E9D35 /* ampmCell.swift in Sources */,
 				101E96742509C8C0003E9D35 /* WeatherBannerCell.swift in Sources */,
+				10F2A8D125132FE1003E2244 /* TransformingCell.swift in Sources */,
+				10F2A8C925132F05003E2244 /* PinterestCell.swift in Sources */,
 				101E96792509CAAB003E9D35 /* categoryCell.swift in Sources */,
 				101E967B2509DFE8003E9D35 /* WeatherController.swift in Sources */,
+				10F2A8CD25132F58003E2244 /* TImbreCell.swift in Sources */,
+				10F2A8C125132243003E2244 /* StickyHeaderController.swift in Sources */,
 				101E96602501E2BD003E9D35 /* Naver.swift in Sources */,
 				101E964A2501499F003E9D35 /* LoginController.swift in Sources */,
 				101E96812509E039003E9D35 /* tomorrowWeatherCell.swift in Sources */,
+				10F2A8CB25132F3D003E2244 /* StickyHeaderCell.swift in Sources */,
 				101E96342501496C003E9D35 /* AppDelegate.swift in Sources */,
+				10F2A8C525132243003E2244 /* TransformingController.swift in Sources */,
+				10F2A8C425132243003E2244 /* TimbreController.swift in Sources */,
+				10F2A8CF25132F9A003E2244 /* UltraVisualCell.swift in Sources */,
+				10F2A8C225132243003E2244 /* PinterestController.swift in Sources */,
 				101E967D2509E00A003E9D35 /* todayWeatherCell.swift in Sources */,
 				101E9669250209FF003E9D35 /* ButtonLoginCell.swift in Sources */,
 				101E96892509E08B003E9D35 /* weatherBar.swift in Sources */,
