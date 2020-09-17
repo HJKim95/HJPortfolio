@@ -21,6 +21,15 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     let bannerid = "bannerid"
     let resultid = "resultid"
     
+    lazy var backImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.image = UIImage(named: "back")
+        iv.isUserInteractionEnabled = true
+        iv.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBack)))
+        return iv
+    }()
+    
     lazy var loginCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -44,18 +53,26 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         setupLayouts()
     }
     
+    var backImageViewConstraint: NSLayoutConstraint?
     var loginCollectionViewConstraint: NSLayoutConstraint?
     
     fileprivate func setupLayouts() {
+        view.addSubview(backImageView)
         view.addSubview(loginCollectionView)
         
         if #available(iOS 11.0, *) {
-            loginCollectionViewConstraint = loginCollectionView.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
+            backImageViewConstraint = backImageView.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 24, leftConstant: 24, bottomConstant: 0, rightConstant: 0, widthConstant: 24, heightConstant: 24).first
+            loginCollectionViewConstraint = loginCollectionView.anchor(backImageView.bottomAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
         }
         else {
-            loginCollectionViewConstraint = loginCollectionView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
+            backImageViewConstraint = backImageView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 24, leftConstant: 24, bottomConstant: 0, rightConstant: 0, widthConstant: 24, heightConstant: 24).first
+            loginCollectionViewConstraint = loginCollectionView.anchor(backImageView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
         }
         
+    }
+    
+    @objc fileprivate func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -134,9 +151,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
             let loginInfo: [String: String] = ["name": name, "email": email, "sns": sns]
             userdefault.set(loginInfo, forKey: "LoginInfo")
             
-            currentUserInfo["name"] = name
-            currentUserInfo["email"] = email
-            currentUserInfo["sns"] = sns
+            currentUserInfo = loginInfo
         }
         else {
             cell.statusLabel.text = "Not connected"

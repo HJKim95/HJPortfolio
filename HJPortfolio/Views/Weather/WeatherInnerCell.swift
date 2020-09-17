@@ -39,6 +39,7 @@ class WeatherInnerCell: UICollectionViewCell {
 
             directionImageView.image = UIImage(named: "direction")
             guard let angle = weatherInfo?["VEC"] else {return}
+            directionImageView.transform = .identity // reload를 대비해서 매번 초기화시키기
             let transfer = (Double(angle)! + (22.5 * 0.5)) / 22.5
             if Int(transfer) % 4 == 0 {
                 var rotate: CGFloat = 0

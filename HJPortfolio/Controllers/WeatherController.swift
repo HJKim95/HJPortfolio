@@ -18,6 +18,15 @@ class WeatherController: UIViewController, UICollectionViewDelegate, UICollectio
     fileprivate let tomorrowid = "tomorrowid"
     fileprivate let forecastid = "forecastid"
     
+    lazy var backImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.image = UIImage(named: "back")
+        iv.isUserInteractionEnabled = true
+        iv.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBack)))
+        return iv
+    }()
+    
     let locationLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -71,30 +80,38 @@ class WeatherController: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     
+    var backImageViewConstraint: NSLayoutConstraint?
     var locationLabelConstraint: NSLayoutConstraint?
     var updateImageViewConstraint: NSLayoutConstraint?
     var weatherbarConstraint: NSLayoutConstraint?
     var weatherCollectionViewConstraint: NSLayoutConstraint?
     
     fileprivate func setupLayouts() {
+        view.addSubview(backImageView)
         view.addSubview(locationLabel)
         view.addSubview(updateImageView)
         view.addSubview(weatherbar)
         view.addSubview(weatherCollectionView)
         
         if #available(iOS 11.0, *) {
-            updateImageViewConstraint = updateImageView.anchor(view.safeAreaLayoutGuide.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 30, widthConstant: 20, heightConstant: 20).first
-            locationLabelConstraint = locationLabel.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: updateImageView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40).first
+            backImageViewConstraint = backImageView.anchor(view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 24, leftConstant: 24, bottomConstant: 0, rightConstant: 0, widthConstant: 24, heightConstant: 24).first
+            updateImageViewConstraint = updateImageView.anchor(view.safeAreaLayoutGuide.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 26, leftConstant: 0, bottomConstant: 0, rightConstant: 30, widthConstant: 20, heightConstant: 20).first
+            locationLabelConstraint = locationLabel.anchor(view.safeAreaLayoutGuide.topAnchor, left: backImageView.rightAnchor, bottom: nil, right: updateImageView.leftAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: 0, heightConstant: 40).first
             weatherbarConstraint = weatherbar.anchor(locationLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40).first
             weatherCollectionViewConstraint = weatherCollectionView.anchor(weatherbar.bottomAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
         }
             
         else {
-            updateImageViewConstraint = updateImageView.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 30, widthConstant: 20, heightConstant: 20).first
-            locationLabelConstraint = locationLabel.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: updateImageView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40).first
+            backImageViewConstraint = backImageView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 24, leftConstant: 24, bottomConstant: 0, rightConstant: 0, widthConstant: 24, heightConstant: 24).first
+            updateImageViewConstraint = updateImageView.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 26, leftConstant: 0, bottomConstant: 0, rightConstant: 30, widthConstant: 20, heightConstant: 20).first
+            locationLabelConstraint = locationLabel.anchor(view.topAnchor, left: backImageView.rightAnchor, bottom: nil, right: updateImageView.leftAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 5, widthConstant: 0, heightConstant: 40).first
             weatherbarConstraint = weatherbar.anchor(locationLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40).first
             weatherCollectionViewConstraint = weatherCollectionView.anchor(weatherbar.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0).first
         }
+    }
+    
+    @objc fileprivate func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     fileprivate func getLocationPermission() {
@@ -191,18 +208,18 @@ class WeatherController: UIViewController, UICollectionViewDelegate, UICollectio
     }
 
     var ampmWeatherInfo = [futureWeatherModel]()
-    fileprivate func getAmPmWeather(future: Bool) {
-        WeatherApiHelper.shared.getTomorrowWeather(future: future) { [weak self] (weather) in
+    fileprivate func getAmPmWeather(location: String, future: Bool) {
+        WeatherApiHelper.shared.getTomorrowWeather(future: future, location: location) { [weak self] (weather) in
             self?.ampmWeatherInfo = weather
         }
     }
     
     var futureWeatherInfo = [futureWeatherModel]()
     
-    fileprivate func getFutureWeather() {
-        WeatherApiHelper.shared.getTomorrowWeather(future: true) { [weak self] (nearWeather) in
+    fileprivate func getFutureWeather(location: String) {
+        WeatherApiHelper.shared.getTomorrowWeather(future: true, location: location) { [weak self] (nearWeather) in
             self?.futureWeatherInfo = nearWeather
-            WeatherApiHelper.shared.getForecastWeather { [weak self] (futureWeather) in
+            WeatherApiHelper.shared.getForecastWeather(location: location) { [weak self] (futureWeather) in
                 self?.futureWeatherInfo += futureWeather
                 self?.weatherCollectionView.reloadData()
             }
@@ -277,9 +294,7 @@ class WeatherController: UIViewController, UICollectionViewDelegate, UICollectio
         if !didUpdated {
             getNowWeather(lat: lat, long: long)
             getWeatherData(lat: lat, long: long)
-            getAmPmWeather(future: false)
-
-            getFutureWeather()
+            
 
             let geocoder = CLGeocoder()
             geocoder.reverseGeocodeLocation(userLocation) { [weak self] (placemarks, error) in
@@ -296,6 +311,10 @@ class WeatherController: UIViewController, UICollectionViewDelegate, UICollectio
                     guard let city = placemark.administrativeArea else {return}
                     guard let locality = placemark.locality else {return}
                     guard let locName = placemark.name else {return}
+                    
+                    self?.getAmPmWeather(location: city, future: false)
+                    self?.getFutureWeather(location: city)
+                    
                     self?.locationLabel.text = "  \(city) \(locality) \(locName)"
                     self?.getCurrentDustData(cityName: city, subLocalName: locality)
                     self?.getTomorrowDustData()

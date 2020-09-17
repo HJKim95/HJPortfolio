@@ -10,7 +10,7 @@ PODS:
     - FBSDKLoginKit/Login (= 7.1.1)
   - FBSDKLoginKit/Login (7.1.1):
     - FBSDKCoreKit (~> 7.1.1)
-  - HJWeather (0.1.5):
+  - HJWeather (0.2.0):
     - Alamofire
     - SwiftyJSON
   - naveridlogin-sdk-ios (4.1.2)
@@ -35,7 +35,7 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
-  HJWeather: 6c4fdf52403772e66bd2f04b68c4ce535ea72197
+  HJWeather: 5d3d89221dc56b7cb98a5826b5a826ff13f762c7
   naveridlogin-sdk-ios: cf8afccdb1793d4ecfcd5d46aa8729d8b5058c70
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 

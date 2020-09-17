@@ -29,6 +29,10 @@
 - [HJLogin-Facebook](https://github.com/HJKim95/HJLogin-Facebook)
 - [HJLogin-Apple](https://github.com/HJKim95/HJLogin-Apple)
 
+### Features
+- Used UserDefault to store login infos.
+
+![login_portfolio](https://user-images.githubusercontent.com/29699823/93412677-9682cb80-f8d8-11ea-8433-55c3f88eb46b.gif)
 
 ## Weather <a id='weather'></a>
 ### Getting Started

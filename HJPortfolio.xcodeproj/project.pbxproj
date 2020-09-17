@@ -39,6 +39,7 @@
 		101E96872509E079003E9D35 /* forecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96862509E079003E9D35 /* forecastCell.swift */; };
 		101E96892509E08B003E9D35 /* weatherBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96882509E08B003E9D35 /* weatherBar.swift */; };
 		101E96932511E655003E9D35 /* HJPortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96922511E655003E9D35 /* HJPortfolioUITests.swift */; };
+		10F2A8BB2512F728003E2244 /* weather_location.csv in Resources */ = {isa = PBXBuildFile; fileRef = 10F2A8BA2512F728003E2244 /* weather_location.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		101E96902511E655003E9D35 /* HJPortfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJPortfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		101E96922511E655003E9D35 /* HJPortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJPortfolioUITests.swift; sourceTree = "<group>"; };
 		101E96942511E655003E9D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F2A8BA2512F728003E2244 /* weather_location.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = weather_location.csv; sourceTree = "<group>"; };
 		1738D475F40650605964FFA7 /* Pods-HJPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.debug.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HJPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B121E76E6761440851184EE /* Pods-HJPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.release.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				101E967025021FDC003E9D35 /* HJPortfolio.entitlements */,
+				10F2A8BA2512F728003E2244 /* weather_location.csv */,
 				101E965225014D0F003E9D35 /* KakaoOpenSDK-Bridging-Header.h */,
 				101E96332501496C003E9D35 /* AppDelegate.swift */,
 				101E96352501496C003E9D35 /* SceneDelegate.swift */,
@@ -362,6 +365,7 @@
 			files = (
 				101E96402501496D003E9D35 /* LaunchScreen.storyboard in Resources */,
 				101E963D2501496D003E9D35 /* Assets.xcassets in Resources */,
+				10F2A8BB2512F728003E2244 /* weather_location.csv in Resources */,
 				101E963B2501496C003E9D35 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
