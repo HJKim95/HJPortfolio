@@ -72,8 +72,8 @@
 
 ## Author
 
-HeeJung Kim, 25ephipany@naver.com
-[![instagram](https://user-images.githubusercontent.com/29699823/93549293-f1352980-f9a3-11ea-85c0-02ae4e5579a8.png)](https://www.instagram.com/dev_heejung/) @dev_heejung
+HeeJung Kim, 25ephipany@naver.com<br/> 
+[![instagram_logo](https://user-images.githubusercontent.com/29699823/93549469-525cfd00-f9a4-11ea-86f7-a0f470f295b0.png)](https://www.instagram.com/dev_heejung/) [@dev_heejung](https://www.instagram.com/dev_heejung/)
 
 ## License
 
