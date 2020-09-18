@@ -6,14 +6,12 @@
 ![Version](https://img.shields.io/github/v/tag/HJKim95/HJPortfolio?color=red&label=version)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/HJKim95/HJPortfolio/blob/master/LICENSE)
 [![Contact](https://img.shields.io/badge/contact-Instagram-%23c73f8d)](https://www.instagram.com/dev_heejung/)
-https://img.shields.io/badge/contact-Instagram-%23c73f8d
 
 ## Requirements
 * iOS 13.0+ 
 * Xcode 11+
 * Swift 5.0+
 
-https://img.shields.io/instgram/url?style=social&url=https%3A%2F%2Fwww.instagram.com%2Fdev_heejung%2F
 ## Table of Contents
 - [SNS Login](#sns_login)
 - [Weather](#weather)
@@ -74,7 +72,8 @@ https://img.shields.io/instgram/url?style=social&url=https%3A%2F%2Fwww.instagram
 
 ## Author
 
-HJKim95, 25ephipany@naver.com
+HeeJung Kim, 25ephipany@naver.com
+[![instagram_icon](https://user-images.githubusercontent.com/29699823/93549079-84ba2a80-f9a3-11ea-9c44-5ea283bf1273.jpg)](https://www.instagram.com/dev_heejung/) @dev_heejung
 
 ## License
 
