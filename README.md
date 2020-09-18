@@ -1,6 +1,6 @@
 # HJPortfolio
 
-![HJWeather_main](https://user-images.githubusercontent.com/29699823/93293895-0a16d100-f824-11ea-8e80-5b2b300d9f8d.png)
+![HJPortfolio_main](https://user-images.githubusercontent.com/29699823/93548755-db733480-f9a2-11ea-91fb-4650038be9da.png)
 [![Languages](https://img.shields.io/badge/language-swift%205.0%20-FF69B4.svg?style=plastic)](#) <br/> 
 [![CI Status](https://img.shields.io/travis/HJKim95/HJPortfolio.svg?style=flat)](https://travis-ci.org/HJKim95/HJPortfolio)
 ![Version](https://img.shields.io/github/v/tag/HJKim95/HJPortfolio?color=red&label=version)
