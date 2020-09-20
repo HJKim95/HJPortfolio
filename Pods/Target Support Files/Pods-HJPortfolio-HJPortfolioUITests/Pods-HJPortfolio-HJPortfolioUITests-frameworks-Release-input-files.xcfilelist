@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
+${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
+${BUILT_PRODUCTS_DIR}/HJLayout/HJLayout.framework
+${BUILT_PRODUCTS_DIR}/HJWeather/HJWeather.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${PODS_ROOT}/naveridlogin-sdk-ios/NaverThirdPartyLogin.framework

@@ -10,6 +10,27 @@ PODS:
     - FBSDKLoginKit/Login (= 7.1.1)
   - FBSDKLoginKit/Login (7.1.1):
     - FBSDKCoreKit (~> 7.1.1)
+  - Google-Maps-iOS-Utils (3.3.0):
+    - Google-Maps-iOS-Utils/Clustering (= 3.3.0)
+    - Google-Maps-iOS-Utils/Geometry (= 3.3.0)
+    - Google-Maps-iOS-Utils/Heatmap (= 3.3.0)
+    - Google-Maps-iOS-Utils/QuadTree (= 3.3.0)
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Clustering (3.3.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Geometry (3.3.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Heatmap (3.3.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/QuadTree (3.3.0):
+    - GoogleMaps
+  - GoogleMaps (3.10.0):
+    - GoogleMaps/Maps (= 3.10.0)
+  - GoogleMaps/Base (3.10.0)
+  - GoogleMaps/Maps (3.10.0):
+    - GoogleMaps/Base
   - HJLayout (0.1.5)
   - HJWeather (0.2.1):
     - Alamofire
@@ -20,6 +41,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - FBSDKLoginKit
+  - Google-Maps-iOS-Utils
+  - GoogleMaps
   - HJLayout
   - HJWeather
   - naveridlogin-sdk-ios
@@ -29,6 +52,8 @@ SPEC REPOS:
     - Alamofire
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - Google-Maps-iOS-Utils
+    - GoogleMaps
     - HJLayout
     - HJWeather
     - naveridlogin-sdk-ios
@@ -38,11 +63,13 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
+  Google-Maps-iOS-Utils: 5481c2c8999a7847424755d777c241c238243c0a
+  GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
   HJLayout: e1727f97061c50f1568b61d8e11fd7a592d4966c
   HJWeather: b0d0f2ed1adfcb49289b0ee0b57278e183b9fff0
   naveridlogin-sdk-ios: cf8afccdb1793d4ecfcd5d46aa8729d8b5058c70
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 85309f2fe75360540ace23eba3597e0cd222a9a1
+PODFILE CHECKSUM: 9f7e2bd673b74464efeb7754bded5f37dd1d431d
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0.rc.1

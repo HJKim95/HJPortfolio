@@ -10,6 +10,7 @@ import UIKit
 import NaverThirdPartyLogin
 import FBSDKLoginKit
 import AuthenticationServices
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -50,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         instance?.consumerSecret = kConsumerSecret
         // 애플리케이션 이름
         instance?.appName = kServiceAppName
+        
+        GMSServices.provideAPIKey("AIzaSyDDiX_0F4nfEP8KBZffZ9IcYEOBqc1gq5c")
         
         return true
     }

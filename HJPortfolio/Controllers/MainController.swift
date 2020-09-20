@@ -17,10 +17,11 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var locationManager = CLLocationManager()
     
-    let bigCategories = ["Logins","Weathers","Collectionview layouts", "Collectionview transforming layouts"]
+    let bigCategories = ["Logins","Weathers","Collectionview layouts", "Collectionview transforming layouts", "Maps"]
     let loginCategories = ["SNS Login"]
     let layoutCategories = ["Pinterest", "Sticky Header", "Ultra Visual", "Timbre"]
     let transformingCategories = ["Transforming"]
+    let mapCategories = ["Google Map", "Naver Map"]
     
     let titleLabel: UILabel = {
         let label = UILabel()
@@ -97,6 +98,9 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
             else if indexPath.item == 3 {
                 cell.categories = transformingCategories
             }
+            else if indexPath.item == 4 {
+                cell.categories = mapCategories
+            }
             cell.delegate = self
             return cell
         }
@@ -121,6 +125,9 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             else if indexPath.item == 3 {
                 counts = transformingCategories.count
+            }
+            else if indexPath.item == 4 {
+                counts = mapCategories.count
             }
             return CGSize(width: collectionView.frame.width, height: CGFloat(counts * 40) + 38)
         }
@@ -147,6 +154,10 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
             controll = TimbreController()
         case "Transforming":
             controll = TransformingController()
+        case "Google Map":
+            controll = GoogleMapController()
+        case "Naver Map":
+            print(456)
         default:
             print("none of controller matched")
         }

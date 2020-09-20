@@ -5,14 +5,21 @@ target 'HJPortfolio' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  # Pods for HJPortfolio
+
 # Login section
 pod 'naveridlogin-sdk-ios'
 pod 'Alamofire'
 pod 'FBSDKLoginKit'
 
+pod 'GoogleMaps'
+pod 'Google-Maps-iOS-Utils'
+
 pod 'HJWeather'
 pod 'HJLayout'
 
-  # Pods for HJPortfolio
+  target 'HJPortfolioUITests' do
+    # Pods for testing
+  end
 
 end

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EE25DD8FA9B75CD1578D8C0 /* Pods_HJPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */; };
+		0E3A8204E8CF59B6CC10BB92 /* Pods_HJPortfolio_HJPortfolioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39212B86828F4FD0BEEE4A02 /* Pods_HJPortfolio_HJPortfolioUITests.framework */; };
 		101E96342501496C003E9D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96332501496C003E9D35 /* AppDelegate.swift */; };
 		101E96362501496C003E9D35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96352501496C003E9D35 /* SceneDelegate.swift */; };
 		101E963B2501496C003E9D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101E96392501496C003E9D35 /* Main.storyboard */; };
@@ -39,6 +39,7 @@
 		101E96872509E079003E9D35 /* forecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96862509E079003E9D35 /* forecastCell.swift */; };
 		101E96892509E08B003E9D35 /* weatherBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96882509E08B003E9D35 /* weatherBar.swift */; };
 		101E96932511E655003E9D35 /* HJPortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E96922511E655003E9D35 /* HJPortfolioUITests.swift */; };
+		107AA3DA251735DF0016BABB /* Pods_HJPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */; };
 		10F2A8BB2512F728003E2244 /* weather_location.csv in Resources */ = {isa = PBXBuildFile; fileRef = 10F2A8BA2512F728003E2244 /* weather_location.csv */; };
 		10F2A8C125132243003E2244 /* StickyHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8BC25132243003E2244 /* StickyHeaderController.swift */; };
 		10F2A8C225132243003E2244 /* PinterestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8BD25132243003E2244 /* PinterestController.swift */; };
@@ -50,6 +51,9 @@
 		10F2A8CD25132F58003E2244 /* TImbreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8CC25132F58003E2244 /* TImbreCell.swift */; };
 		10F2A8CF25132F9A003E2244 /* UltraVisualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8CE25132F9A003E2244 /* UltraVisualCell.swift */; };
 		10F2A8D125132FE1003E2244 /* TransformingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8D025132FE1003E2244 /* TransformingCell.swift */; };
+		10F2A8DF25148D5F003E2244 /* GoogleMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8DC25148D5E003E2244 /* GoogleMapController.swift */; };
+		10F2A8E025148D5F003E2244 /* MapClusterIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8DD25148D5F003E2244 /* MapClusterIconGenerator.swift */; };
+		10F2A8E125148D5F003E2244 /* MapinfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2A8DE25148D5F003E2244 /* MapinfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E7110079B4B15E268024318 /* Pods-HJPortfolio-HJPortfolioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio-HJPortfolioUITests.debug.xcconfig"; path = "Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		101E96302501496C003E9D35 /* HJPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101E96332501496C003E9D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		101E96352501496C003E9D35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 		101E96902511E655003E9D35 /* HJPortfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJPortfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		101E96922511E655003E9D35 /* HJPortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJPortfolioUITests.swift; sourceTree = "<group>"; };
 		101E96942511E655003E9D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		107AA45425173BA60016BABB /* HJWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HJWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F2A8BA2512F728003E2244 /* weather_location.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = weather_location.csv; sourceTree = "<group>"; };
 		10F2A8BC25132243003E2244 /* StickyHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyHeaderController.swift; sourceTree = "<group>"; };
 		10F2A8BD25132243003E2244 /* PinterestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestController.swift; sourceTree = "<group>"; };
@@ -124,7 +130,13 @@
 		10F2A8CC25132F58003E2244 /* TImbreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImbreCell.swift; sourceTree = "<group>"; };
 		10F2A8CE25132F9A003E2244 /* UltraVisualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraVisualCell.swift; sourceTree = "<group>"; };
 		10F2A8D025132FE1003E2244 /* TransformingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformingCell.swift; sourceTree = "<group>"; };
+		10F2A8DA2514896A003E2244 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		10F2A8DC25148D5E003E2244 /* GoogleMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapController.swift; sourceTree = "<group>"; };
+		10F2A8DD25148D5F003E2244 /* MapClusterIconGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapClusterIconGenerator.swift; sourceTree = "<group>"; };
+		10F2A8DE25148D5F003E2244 /* MapinfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapinfoView.swift; sourceTree = "<group>"; };
 		1738D475F40650605964FFA7 /* Pods-HJPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.debug.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
+		1CCE57EFCFB259B126E23007 /* Pods-HJPortfolio-HJPortfolioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio-HJPortfolioUITests.release.xcconfig"; path = "Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests.release.xcconfig"; sourceTree = "<group>"; };
+		39212B86828F4FD0BEEE4A02 /* Pods_HJPortfolio_HJPortfolioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HJPortfolio_HJPortfolioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HJPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B121E76E6761440851184EE /* Pods-HJPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJPortfolio.release.xcconfig"; path = "Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101E965525014F42003E9D35 /* KakaoOpenSDK.framework in Frameworks */,
-				0EE25DD8FA9B75CD1578D8C0 /* Pods_HJPortfolio.framework in Frameworks */,
+				107AA3DA251735DF0016BABB /* Pods_HJPortfolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E3A8204E8CF59B6CC10BB92 /* Pods_HJPortfolio_HJPortfolioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +205,11 @@
 		101E964D25014C8A003E9D35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				107AA45425173BA60016BABB /* HJWeather.framework */,
+				10F2A8DA2514896A003E2244 /* libz.tbd */,
 				101E965325014F1E003E9D35 /* KakaoOpenSDK.framework */,
 				92B128EC79DA58929F386FB1 /* Pods_HJPortfolio.framework */,
+				39212B86828F4FD0BEEE4A02 /* Pods_HJPortfolio_HJPortfolioUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,6 +220,9 @@
 				101E96492501499F003E9D35 /* MainController.swift */,
 				101E96472501499F003E9D35 /* LoginController.swift */,
 				101E967A2509DFE8003E9D35 /* WeatherController.swift */,
+				10F2A8DC25148D5E003E2244 /* GoogleMapController.swift */,
+				10F2A8DD25148D5F003E2244 /* MapClusterIconGenerator.swift */,
+				10F2A8DE25148D5F003E2244 /* MapinfoView.swift */,
 				10F2A8C625132249003E2244 /* Collectionview custom layouts */,
 			);
 			path = Controllers;
@@ -321,6 +340,8 @@
 			children = (
 				1738D475F40650605964FFA7 /* Pods-HJPortfolio.debug.xcconfig */,
 				9B121E76E6761440851184EE /* Pods-HJPortfolio.release.xcconfig */,
+				0E7110079B4B15E268024318 /* Pods-HJPortfolio-HJPortfolioUITests.debug.xcconfig */,
+				1CCE57EFCFB259B126E23007 /* Pods-HJPortfolio-HJPortfolioUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -337,7 +358,8 @@
 				101E962D2501496C003E9D35 /* Frameworks */,
 				101E962E2501496C003E9D35 /* Resources */,
 				101E965125014C8A003E9D35 /* Embed Frameworks */,
-				83C025BA3F12E40C577ECFB3 /* [CP] Embed Pods Frameworks */,
+				E29D769C5E89995506C2E204 /* [CP] Embed Pods Frameworks */,
+				B8160B3D86B4C223EF38BA79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,9 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 101E96992511E655003E9D35 /* Build configuration list for PBXNativeTarget "HJPortfolioUITests" */;
 			buildPhases = (
+				6EF09C312A40BCE65C2F3E3B /* [CP] Check Pods Manifest.lock */,
 				101E968C2511E655003E9D35 /* Sources */,
 				101E968D2511E655003E9D35 /* Frameworks */,
 				101E968E2511E655003E9D35 /* Resources */,
+				E40B2B9C9127BC5AD06E2956 /* [CP] Embed Pods Frameworks */,
+				99ABB8993A5B34012F96BD36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,7 +398,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = HJ;
 				TargetAttributes = {
 					101E962F2501496C003E9D35 = {
@@ -426,21 +451,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		83C025BA3F12E40C577ECFB3 /* [CP] Embed Pods Frameworks */ = {
+		6EF09C312A40BCE65C2F3E3B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HJPortfolio-HJPortfolioUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99ABB8993A5B34012F96BD36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8160B3D86B4C223EF38BA79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE2D1A29A4FD55BC1F50A207 /* [CP] Check Pods Manifest.lock */ = {
@@ -463,6 +527,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E29D769C5E89995506C2E204 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio/Pods-HJPortfolio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E40B2B9C9127BC5AD06E2956 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HJPortfolio-HJPortfolioUITests/Pods-HJPortfolio-HJPortfolioUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -497,12 +595,15 @@
 				10F2A8C425132243003E2244 /* TimbreController.swift in Sources */,
 				10F2A8CF25132F9A003E2244 /* UltraVisualCell.swift in Sources */,
 				10F2A8C225132243003E2244 /* PinterestController.swift in Sources */,
+				10F2A8E125148D5F003E2244 /* MapinfoView.swift in Sources */,
 				101E967D2509E00A003E9D35 /* todayWeatherCell.swift in Sources */,
 				101E9669250209FF003E9D35 /* ButtonLoginCell.swift in Sources */,
 				101E96892509E08B003E9D35 /* weatherBar.swift in Sources */,
 				101E964C2501499F003E9D35 /* MainController.swift in Sources */,
 				101E966D25021EE5003E9D35 /* FacebookModel.swift in Sources */,
+				10F2A8DF25148D5F003E2244 /* GoogleMapController.swift in Sources */,
 				101E96362501496C003E9D35 /* SceneDelegate.swift in Sources */,
+				10F2A8E025148D5F003E2244 /* MapClusterIconGenerator.swift in Sources */,
 				101E967F2509E020003E9D35 /* WeatherInnerCell.swift in Sources */,
 				101E96852509E061003E9D35 /* forecastWeatherCell.swift in Sources */,
 				101E965C2501E27B003E9D35 /* Kakao.swift in Sources */,
@@ -574,6 +675,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -598,7 +700,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -634,6 +736,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -652,9 +755,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -671,8 +775,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D2JL6BMG3;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = HJPortfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -680,12 +784,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = HJKim.HJPortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./HJPortfolio/KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64e armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -698,8 +807,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D2JL6BMG3;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = HJPortfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -707,17 +816,23 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = HJKim.HJPortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./HJPortfolio/KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64e armv7 armv7s arm64";
 			};
 			name = Release;
 		};
 		101E96972511E655003E9D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7110079B4B15E268024318 /* Pods-HJPortfolio-HJPortfolioUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D2JL6BMG3;
@@ -738,6 +853,7 @@
 		};
 		101E96982511E655003E9D35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CCE57EFCFB259B126E23007 /* Pods-HJPortfolio-HJPortfolioUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D2JL6BMG3;
