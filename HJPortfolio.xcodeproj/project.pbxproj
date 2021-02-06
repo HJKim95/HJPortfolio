@@ -794,7 +794,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "./HJPortfolio/KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64e armv7 armv7s arm64";
+				VALID_ARCHS = "arm64e armv7 armv7s arm64 x86_64";
 			};
 			name = Debug;
 		};
@@ -826,7 +826,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "./HJPortfolio/KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64e armv7 armv7s arm64";
+				VALID_ARCHS = "arm64e armv7 armv7s arm64 x86_64";
 			};
 			name = Release;
 		};
